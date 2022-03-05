@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Practice project</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            background-color: #000;
+            color: #fff;
+            border-bottom: 4px #000 solid;
+            text-align: center;
+            padding: 10px;
+        }
+        p{
+            box-flex-group: aqua;
+            padding: 30px;
+            color: #fff;
+        }
+        .slide-toggle{
+            background-color: orange;
+            color: #fff;
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>jQuery Practice project</h1>
+    </header>
+    <main>
+        <div class="container">
+            <h1>Mouse Events</h1>
+            <!-- <button id="btn1">Hide</button>
+            <button id="btn2">Show</button>
+            <button id="btn3">Toggle</button> -->
+            <button id="btn4">Slide Toggle</button>
+
+            <p class="slide-toggle">
+                re'sgjsmpkfbs Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum, illum.
+            </p>
+        </div>
+        <!-- <p class="para">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias architecto ex obcaecati est cumque doloribus ab porro aspernatur dicta delectus.
+        </p> -->
+        <h1 class="slide-toggle">dnjlabvjdbn:</h1>
+
+        <p class="slide-toggle">
+            re'sgjsmpkfbs Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum, illum.
+        </p>
+    </main>
+    
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function(){
+            // $('#btn1').click(()=>{
+            //     alert("Hello World")
+            // })
+
+            // hide
+            $('#btn1').on('click', ()=>{
+                $('.para').hide();
+            }); 
+
+            // Show
+            $('#btn2').on('click', ()=>{
+                $('.para').show();
+            })
+
+            // Toggle
+            $('#btn3').on('click', ()=>{
+                $('.para').toggle();
+            })
+
+            // 
+            $('.para').on('click', (e)=>{
+                alert(e.currentTarget.innerText);
+            })
+
+            // Slide toogle
+            $('#btn4').on('click', ()=>{
+                $('.slide-toggle').slideToggle(3000)
+            })
+
+        })
+        
+    </script>
+
+</body>
+</html>
